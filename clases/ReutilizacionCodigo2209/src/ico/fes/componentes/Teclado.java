@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ico.fes.componentes;
 
-/**
- *
- * @author calav
- */
+
 public class Teclado {
 
     private String marca;
@@ -37,8 +31,9 @@ public class Teclado {
         this.marca = marca;
     }
 
-@Override
+    @Override
     public String toString() {
         return "Teclado{" + "marca=" + marca + ", numeroTeclas=" + numeroTeclas + '}';
     }
+
 }

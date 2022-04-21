@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ico.fes.herencia;
 
 /**
@@ -49,6 +46,22 @@ public class Alumno extends Persona {
     }
 
     public void estudiar(int cantidad) {
-        System.out.println(this.getNombre() + "esta estudiando" + cantidad + "Hrs");
+        System.out.println(this.getNombre() + " esta estudiando" + cantidad + "Hrs");
+    
     }
+    
+    //Polimorfismo por sobre escritura
+    @Override
+    public void dormir (){
+        System.out.println("El estudiante " 
+                + this.getNombre()+ " esta durmiendo 5 horas...");
+    }
+    
+    //Polimorfismo por sobre carga
+    public void dormir (int horasEstudio){
+        int horasDormir = 8;
+        System.out.println(this.getNombre()+ 
+                " esta durmiendo " + (horasDormir - horasEstudio) + " horas");
+    }
+    
 }

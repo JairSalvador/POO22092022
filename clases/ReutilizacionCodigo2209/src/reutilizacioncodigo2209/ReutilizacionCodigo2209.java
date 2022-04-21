@@ -78,9 +78,9 @@ public class ReutilizacionCodigo2209 {
         dog.emitirSonido();
         animal1.emitirSonido();
 
-//     ((Animal)a).emititSonido();
-//        dog.emitirSonido();
-//        ((Animal) dog).emitirSonido();
+        //((Animal)a).emititSonido();
+        //dog.emitirSonido();
+        //((Animal) dog).emitirSonido();
         //Animal animal = (Animal)dog;
         //System.out.println(animal.getClass());
     }

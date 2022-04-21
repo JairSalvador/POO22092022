@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ico.fes.herencia;
-
-/**
- *
- * @author calav
- */
+//
 public class Persona {
 
     private String nombre;
@@ -19,6 +11,9 @@ public class Persona {
     public Persona(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
+    }
+    public Persona(String var1, int var2, String var4){ //Sobre carga (la firma del metodo no debe ser igual a otra
+        System.out.println("Cualquier cosa");
     }
 
     public int getEdad() {
@@ -43,6 +38,6 @@ public class Persona {
     }
 
     public void dormir() {
-        System.out.println(this.nombre + "esta durmiendo...");
+        System.out.println(this.nombre + " esta durmiendo...");
     }
 }
