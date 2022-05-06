@@ -1,11 +1,12 @@
 package javabasico2209;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class JavaBasico2209 {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         int edad = 20;
         System.out.println("Edad = " + edad);
         Integer edad2 = new Integer(22);
@@ -14,14 +15,15 @@ public class JavaBasico2209 {
         System.out.println(x);
         System.out.println(edad2.shortValue());
         System.out.println("-.-.-.-.-.-.-.-.-.-.-.-.-.-");
+        
         //String a entero
         String cadena="99";
         int altura = Integer.parseInt(cadena);//Metodo miembro o metodo de clase son identificadores que almacenan un valor constante o un comportamiento constante igual para todos los objetos de la misma. al ser constantes no es necesario creear una intancia (objeto para acceder a ellos
-        altura +=1;
+        altura += 1;
         System.out.println("Altura = " + altura);
         
         float y = Float.parseFloat(cadena);
-        y= y+ 0.5f;
+        y= y + 0.5f;
         System.out.println("Altura = " + y);
         
         Arbol tree1 = new Arbol(2.4f,15);
@@ -49,7 +51,7 @@ public class JavaBasico2209 {
         res = edad4 < 18? "Menor de edad" : "Mayor de edad, ten un tequila para la garganta";
         System.out.println(res);
         
-        //Vesrion minima
+        //Versión minima
         int edad5=19;
         System.out.println(edad5<18? "Menor de edad 5": "Ya!, tequila");
         
@@ -65,7 +67,7 @@ public class JavaBasico2209 {
         val4 = val3 << 1; //dezplaza a la izquierda
         System.out.println(val4);
         
-        System.out.println("-----------ARREGLOS------------");
+        System.out.println("------------ARREGLOS------------");
         int[] edades;
         edades = new int [5];
         System.out.println(edades);
@@ -86,12 +88,12 @@ public class JavaBasico2209 {
         for (int i = 0; i < pesos.length; i++) {
             System.out.println(pesos[i]);    
         }
-        System.out.println("Inverso");
+        System.out.println("----ORDEN INVERSO----");
         for (int i = pesos.length-1 ; i >= 0; i--) {
             System.out.println(pesos[i]);   
         }
         
-        System.out.println("Arreglo de alumnos");
+        System.out.println("----ARREGLO DE ALUMNOS----");
         Alumno[] lista = new Alumno[5];
         lista[0]=new Alumno("99999",2,9.0f);
         lista[1]=new Alumno("77777",2,7.0f);
@@ -104,9 +106,54 @@ public class JavaBasico2209 {
             System.out.println(alumno.evaluarDesempenio());
             
         }
-        System.out.println("Con For each");
+        System.out.println("----CON FOR EACH----");
         for (Alumno alumno : lista) {
             System.out.println(alumno.evaluarDesempenio());
         }
+        
+        ArrayList<Alumno> grupo2209 = new ArrayList<Alumno>();
+        grupo2209.add(new Alumno("99999",2,9.0f));
+        grupo2209.add(new Alumno("88888",2,8.0f));
+        grupo2209.add(new Alumno("77777",2,7.0f));
+        grupo2209.add(new Alumno("66666",2,6.0f));
+        grupo2209.add(new Alumno("55555",2,5.0f));
+        
+        for (Alumno alumno : grupo2209) {
+            System.out.println(alumno);
+        }
+        grupo2209.add(2, new Alumno("81111",3,9.9f));
+        
+        for (Alumno alumno : grupo2209) {
+            System.out.println(alumno);
+        }
+        
+        Alumno tmp = grupo2209.get(3);
+        System.out.println("Alumno en index = 3 : " + tmp);
+        
+        System.out.println("Eliminar el index 3");
+        Alumno tmp2 = grupo2209.remove(3);
+        System.out.println("Elemento eliminado = " + tmp2);
+        
+        
+        for (Alumno alumno : grupo2209) {
+            System.out.println(alumno);
+        }
+        System.out.println("Remplazar");
+        Alumno tmp3 = grupo2209.set(0, new Alumno ("44444",4,4.0f));
+        System.out.println("El remplazado es: " + tmp3);
+        
+        for (Alumno alumno : grupo2209) {
+            System.out.println(alumno);
+        }
+       
+        
+        //Excepciones
+        try {
+            System.out.println("Excepciones");
+            System.out.println(grupo2209.get(20));
+        } catch (Exception e) {
+            System.out.println("Error... revisa los índices");
+        }
+        System.out.println("Fin del programa");
     }  
 }
